@@ -31,13 +31,15 @@ class App extends Component {
       list1.push(task1)
       this.setState({taskList:list1})  
     }
+    alert('task successfully added')
   }
 
   deleteTask = (id) => {
-    console.log(id)
-    const list1 = this.state.taskList
-    const list2 = list1.filter(task => (task.id)!==(id))
+//     console.log(id)
+    var list1 = this.state.taskList
+    const list2 = list1.filter(task => (id)!==(task.id))
     this.setState({taskList:list2})
+    alert('task successfully deleted')
   }
 
   render() {
